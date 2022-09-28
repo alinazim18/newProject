@@ -54,11 +54,11 @@ namespace AzureKursusfunction
                 // --- get the blob client using .GetBlobClient
                 // --- afterwards Upload the file to the blob
 
-                var image = Image.FromStream(file.OpenReadStream());
-                var resized = new Bitmap(image, new Size(256, 256));
+               // var image = Image.FromStream(file.OpenReadStream());
+                //var resized = new Bitmap(image, new Size(256, 256));
 
                 using var imageStream = new MemoryStream();
-                resized.Save(imageStream, ImageFormat.Jpeg);
+               // resized.Save(imageStream, ImageFormat.Jpeg);
                 imageStream.Position = 0;
 
                 var blobService = new BlobServiceClient(conn);
